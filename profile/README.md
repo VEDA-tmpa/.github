@@ -3,6 +3,7 @@
 - 코딩 표준
 - 커밋 메시지 컨벤션
 - Release Flow 브랜치 전략
+- pull request 형식은 각 레포에
 
 ## 코딩 표준
 
