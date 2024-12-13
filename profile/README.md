@@ -1,105 +1,28 @@
 
 # NVR 시스템과 객체 탐지 CCTV
+![Untitled-design-001](https://github.com/user-attachments/assets/97939c84-0034-413c-a8fa-5727c53d9dba)
+
 ## 프로젝트 소개
- 쓰레기 무단 투기 단속, CCTV 주변을 단속함에도 불구하고 거리에 공원, 전봇대, 등등 쓰레기가 무단 투기 된 모습을 목격. 이에 쓰레기 무단 투기 단속 CCTV의 실효성에 대해 의문을 갖게 되었고 이를 조금이나마 개선하고자 무단 투기 발생 시 객체 탐지 및 알림이 발생하는 CCTV를 제작하고자 함. 이러한 배경과 함께 CCTV 내부에서 데이터를 어떻게 처리하는지, 그리고 함께하는 NVR(Network Video Recorder)은 어떻게 데이터를 받아 저장을 하고 사용자에게 어떻게 데이터를 주는지에 대한 궁금증이 생겼기에 프로젝트를 진행하게됨. 
+### 배경 및 목표
+ 쓰레기 무단 투기 단속, CCTV 주변을 단속함에도 불구하고 거리에 공원, 전봇대, 등등 쓰레기가 무단 투기 된 모습을 빈번하게 목격했습니다. 이에 쓰레기 무단 투기 단속 CCTV의 실효성에 대해 의문을 갖게 되었고 이를 조금이나마 개선하고자 무단 투기 발생 시 객체 탐지 및 알림이 발생하는 CCTV를 제작하고자 프로젝트 주제를 선정했습니다. 이러한 배경과 함께 CCTV 내부에서 데이터를 어떻게 처리하는지, 그리고 함께하는 NVR(Network Video Recorder)은 어떻게 데이터를 받아 저장을 하고 사용자에게 어떻게 데이터를 주는지에 대한 궁금증이 생겼기에 프로젝트를 진행했습니다. 
+### 개발 기간
+2024.11.07 - 2024.12.12
+### 협업
+애자일 방법론 및 [기타 협업 규칙](https://www.notion.so/k1sihyeon/13e192cfe820814aaebed61718fd7228?pvs=4)
 
-## 팀원 구성
+## 팀원
+| 김시현 | 김정은 | 윤혜경 | 정승진 | 지기성 |
+| :---: | :---: | :---: | :---: | :---: |
+| [@k1sihyeon](https://github.com/k1sihyeon) | [@jjeongni03](https://github.com/jjeongni03) | [@hyetae](https://github.com/hyetae) | [@94seungjin](https://github.com/94seungjin) | [@jiggyjiggy](https://github.com/jiggyjiggy) |
+| Edge | Client | Edge | Server | Server |
 
-## 기술 스택
+## 기술 스택 및 라이브러리
+<img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=C&logoColor=white"> <img src="https://img.shields.io/badge/Qt-41CD52?style=for-the-badge&logo=Qt&logoColor=white"> <img src="https://img.shields.io/badge/OpenSSL-721412?style=for-the-badge&logo=OpenSSL&logoColor=white"> <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=OpenCV&logoColor=white">
+<img src="https://img.shields.io/badge/FFmpeg-007808?style=for-the-badge&logo=FFmpeg&logoColor=white">
 
-## 백로그(기능)
+
+## 데모 영상
+[데모 영상](https://drive.google.com/drive/folders/1Dkg8ShV7lJct7UYL9CxHDLHe2e8VZd1B?usp=share_link)
 
 ## 시스템 아키텍처
-
-## 회고
-
----------------------------------------
-# 협업 규칙
-
-- 코딩 표준
-- 커밋 메시지 컨벤션
-- Release Flow 브랜치 전략
-- pull request 형식은 각 레포에
-
-## 코딩 표준
-
-https://docs.popekim.com/ko/coding-standards/cpp
-
-## 커밋 메시지 컨벤션
-
-### 기본 구조
-
-```
-<type>: <subject>
-<BLANK LINE>
-<body>
-<BLANK LINE>
-<footer>
-```
-
-- `type` : 변경 사항의 유형을 나타내는 태그
-- `subject` : 변경 사항을 간단히 설명 (명령문 형식)
-- `body` : 추가 설명 (선택)
-- `footer` : 이슈 트래킹 번호, 중요 참고 사항 등 (선택)
-
-### 커밋 타입 종류
-
-| Type | 설명 |
-| --- | --- |
-| feat | 새로운 기능 추가 |
-| fix | 버그 수정 |
-| docs | 문서 수정 (README, 주석 등) |
-| style | 코드 포맷팅, 세미콜론 누락 등 코드의 의미에 영향 없는 변경 |
-| refactor | 코드 리팩토링 (기능 변경 없이 코드 구조만 수정) |
-| perf | 성능 개선 |
-| test | 테스트 코드 추가 또는 수정 |
-| build | 빌드 시스템 또는 외부 의존성 수정 |
-| ci | CI 관련 설정 수정 |
-| chore | 기타 자잘한 변경사항 |
-| revert | 이전 커밋 되돌리기 |
-
-### **예시**
-
-```markdown
-feat: 로그인 기능 추가
-
-- JWT를 사용한 로그인 기능 구현
-- 로그인 성공 시 토큰 발급
-- 잘못된 로그인 시 오류 메시지 반환
-```
-
-```markdown
- fix: 로그인 오류 수정
-
-- 로그인 시 잘못된 사용자명으로 인한 오류 수정
-```
-
-```markdown
-docs: README에 설치 방법 추가
-
-- 프로젝트 설치 및 실행 방법 설명 추가
-```
-
-### **참고 사항**
-
-- 제목(subject)은 간결하게 작성
-- 본문(body)은 필요할 때만 작성
-- 꼬리말(footer)에는 이슈 번호를 `#123` 형식으로 추가
-    - ex) Closes #123
-
-## Release Flow 브랜치 전략
-
-### 브랜치 구조
-
-1. `main`: 최종 배포 버전을 관리하는 브랜치. 최종 배포 전까지 이 브랜치로 병합되지 않으며, 최종 검증이 끝난 후 릴리스 브랜치를 해당 브랜치에 병합.
-2. `develop`: 모든 기능을 통합하는 브랜치로, 각 `feature` 브랜치의 변경 사항 병합. 기능이 완성될 때마다 이 브랜치로 병합.
-3. `feature/기능`: 각 팀원이 담당하는 기능을 개발하는 브랜치. 각 기능별로 브랜치를 나누어 작업.
-4. `release`: `main` 브랜치 병합 전 안정화 작업을 진행하는 브랜치. `develop` 브랜치의 기능 완료 후 해당 브랜치 생성. 해당 브랜치에서는 주로 버그 수정과 최종 테스트 작업을 수행.
-
-```markdown
-─── main
-├── feature/chat
-├── feature/...
-├── feature/...
-─── release
-```
+![스크린샷 2024-12-13 오전 10 06 28](https://github.com/user-attachments/assets/d2c011a0-2256-4466-a4a2-17e8e923be7c)
